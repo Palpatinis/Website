@@ -1,0 +1,126 @@
+body {
+  background-color: #e870a0;
+}
+h1 {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  background: #fdd50b;
+  color: #78226d;
+  margin: auto;
+}
+h2 {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  background: #78226d;
+  color: white;
+  margin: auto;
+}
+.ac {
+  text-decoration: none;
+  display: block;
+  height: 80px;
+  width: 250px;
+  background: white;
+  color: #78226d;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 100%;
+  line-height: 80px;
+  font-family: Arial;
+  border-radius: 300px;
+  text-decoration: none;
+  margin: auto;
+}
+
+footer {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  background: #78226d;
+  color: white;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    text-align: center;
+  }
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+@media only screen and(max-width: 1024px) {
+  .grid2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 10px;
+    text-align: center;
+  }
+}
+@media only screen and(max-width: 700px) {
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    text-align: center;
+  }
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 10px;
+  text-align: center;
+}
+@media only screen and(max-width: 1024px) {
+  .grid3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    text-align: center;
+  }
+}
+.topnav {
+  background-color: #78226d;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16% 16%;
+  grid-row-gap: 10px;
+  text-align: center;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #e870a0;
+  color: white;
+}
+.style1 {
+  background: #fdd50b;
+  color: #78226d;
+}

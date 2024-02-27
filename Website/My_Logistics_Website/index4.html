@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Προφίλ Εταιρίας</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="text/javascript">
+      function Cost() {
+        var a = parseFloat(document.getElementById("weight").value);
+        var b = document.getElementById("continent").value;
+        var c = document.querySelector('input[name="priority"]:checked').value;
+        var weightc = 0;
+        var continentc = 0;
+        var statec = 0;
+
+        if (a >= 10.1 && a <= 50) {
+          weightc = 0.935;
+        } else if (a <= 99.9) {
+          weightc = 0.813;
+        } else if (a >= 100) {
+          weightc = 0.754;
+        }
+
+        if (b == "Ευρώπη") {
+          continentc = 1.20;
+        } else if (b == "Βόρεια Αμερική") {
+          continentc = 2.00;
+        } else if (b == "Νότια & Κεντρική Αμερική") {
+          continentc = 3.10;
+        } else if (b == "Ασία") {
+          continentc = 3.45;
+        } else if (b == "Αφρική") {
+          continentc = 4.15;
+        } else if (b == "Ωκεανία") {
+          continentc = 5.00;
+        }
+
+        if (c == "Κατ’ επείγον") {
+          statec = 10.00;
+        } else if (c == "Υψηλή Προτεραιότητα") {
+          statec = 5.00;
+        } else if (c == "Κανονική Προτεραιότητα") {
+          statec = 1.00;
+        }
+
+        var total = a * weightc + a * continentc + statec;
+        alert(total);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="index.html">Αρχική Σελίδα</a>
+      <a href="index2.html" target="_blank">Εταιρεία μας</a>
+      <a href="index3.html">Προμηθευτές</a>
+      <a class="active" href="index4.html">Κόστος Μεταφοράς</a>
+      <a href="index5.html">Επικοινωνία</a>
+      <a href="index6.html">Κατάλογος Πελατών</a>
+    </div>
+
+    <h1>Εισάγεται τα στοιχεία για τον υπολογισμό του κόστους</h1>
+    <p>Εισάγεται το βάρος του προς αποστολή δέματος: <input type="number" id="weight" name="Βάρος" /></p>
+
+    <label for="continent">Επιλέξτε Ήπειρος αποστολής:</label>
+    <select id="continent">
+      <option value="Ευρώπη">Ευρώπη</option>
+      <option value="Βόρεια Αμερική">Βόρεια Αμερική</option>
+      <option value="Νότια & Κεντρική Αμερική">Νότια & Κεντρική Αμερική</option>
+      <option value="Ασία">Ασία</option>
+      <option value="Αφρική">Αφρική</option>
+      <option value="Ωκεανία">Ωκεανία</option>
+    </select>
+
+    <legend>Επιλέξτε κατάσταση παραγγελίας:</legend>
+    <div>
+      <input type="radio" id="urgent" name="priority" value="Κατ’ επείγον" />
+      <label for="urgent">Κατ’ επείγον</label>
+    </div>
+
+    <div>
+      <input type="radio" id="highPriority" name="priority" value="Υψηλή Προτεραιότητα" />
+      <label for="highPriority">Υψηλή Προτεραιότητα</label>
+    </div>
+
+    <div>
+      <input type="radio" id="normalPriority" name="priority" value="Κανονική Προτεραιότητα" />
+      <label for="normalPriority">Κανονική Προτεραιότητα</label>
+    </div>
+
+    <form>
+      <input type="button" onclick="Cost()" value="Υπολογισμός Κόστους" />
+    </form>
+    <footer>
+      <p style="margin:auto">Author: Γεώργιος Σιόντης</p>
+    <div class="grid1">
+  
+     <div>
+        <p class="style1">Φόρμα Εγγραφής</p>
+        <form action="insert2.php" method="POST">
+          <p>Userame: <input type="text" name="username" /></p>
+          <p>Όνομα: <input type="text" name="name" /></p>
+          <p>Email: <input type="text" name="email" /></p>
+          <input type="submit" value="Submit" />
+        <form>
+     </div>
+     <div>
+      <p class="style1">Φόρμα Επικοινωνίας</p>
+      <form action="insert1.php" method="POST">
+            <p>Όνομα: <input type="text" name="name" /></p>
+            <p>Τηλέφωνο: <input type="text" name="phone" /></p>
+            <label>Τμήμα:
+            <select name="sector" id="sector">
+              <option value="Χονδρικό Εμπόριο">Χονδρικό Εμπόριο</option>
+              <option value="Μεταφορές στο Εξωτερικό">Μεταφορές στο Εξωτερικό</option>
+              <option value="Διανομή">Διανομή</option>
+              <option value=" Εφοδιαστική Αλυσίδα"> Εφοδιαστική Αλυσίδα</option>
+            </select>
+          </label>
+            <p>Email: <input type="text" name="email" /></p>
+            <p>Θέμα: <input type="text" name="subject" /></p>
+            <p>Μήνυμα: <textarea name="message"></textarea></p>
+            <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div><p class="style1">Στοιχεία Επικοινωνίας</p>
+        <p><link><a style="color:#FDD50B" href="menelaou" >menelaos6969@gmail.com</a></link></p>
+        <p><link><a style="color:#FDD50B" href="menelaou">6969696969</a></link></p>
+        <p style="color:#E870A0"><link>Menelaou 13</link></p>
+        <p><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Malet%20St,%20London%20WC1E%207HU,%20United%20Kingdom+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">swimming watch</iframe></p></div></div>
+    </footer>
+  </body
+    </html>
+
+
+

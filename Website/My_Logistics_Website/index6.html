@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Προφίλ Εταιρίας</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript">
+   
+   function Verification() {
+        const a = document.getElementById("username").value;
+        const b = document.getElementById("password").value;
+       if(a=="logistics" && b=="Admin_123"){
+         window.open("index7.html")
+          } else {
+            alert("Λυπούμαστε δεν είστε διαχειριστής της διαδικτυακής εφαρμογής")
+      }
+    }
+    
+    
+    </script>
+  </head>
+  <body>
+      <div class="topnav">
+        <a href="index.html">Αρχική Σελίδα</a>
+        <a href="index2.html" target="_blank">Εταιρεία μας</a>
+        <a href="index3.html">Προμηθευτές</a>
+        <a href="index4.html">Κόστος Μεταφοράς</a>
+        <a href="index5.html">Επικοινωνία</a>
+        <a class="active" href="index6.html">Κατάλογος Πελατών</a>
+      </div>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" placeholder="Εισαγωγή username"><br><br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" placeholder="Εισαγωγή password"><br><br>
+  
+  <button onclick="Verification()" type="submit">
+    Εμφάνιση καταλόγου
+  <button>
+  </body>
+</html>
